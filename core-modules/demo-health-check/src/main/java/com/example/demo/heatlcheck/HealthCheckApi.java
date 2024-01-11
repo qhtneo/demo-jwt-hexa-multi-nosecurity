@@ -17,8 +17,8 @@ public final class HealthCheckApi {
 
     private final Environment environment;
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(value = "/")
+    @ResponseStatus(value = HttpStatus.OK)
     public String helloWorld() {
         log.info(STR."""
             Health Check OK
