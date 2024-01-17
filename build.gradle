@@ -271,6 +271,9 @@ project(memberProfileReadModelsModule) {
 project(memberProfileClientApiModule) {
     dependencies {
         implementation commonProject
+        api project(memberProfileDomainModule)
+        api project(memberProfileReadModelsModule)
+        api project(memberProfileExceptionModule)
     }
 }
 
