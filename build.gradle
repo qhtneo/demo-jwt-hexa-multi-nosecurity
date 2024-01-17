@@ -209,8 +209,6 @@ project(authenticationWebAdapterModule) {
     dependencies {
         implementation commonProject
         implementation project(authenticationApplicationModule)
-
-        // jakarta
         implementation 'org.springframework.boot:spring-boot-starter-validation'
 
         // Map Struct
@@ -289,6 +287,17 @@ project(memberProfileRdbAdapterModule) {
         implementation commonProject
         implementation jpaCoreProject
         implementation project(memberProfileApplicationModule)
+
+        // DB
+        runtimeOnly 'org.postgresql:postgresql'
+
+        // Flyway
+        implementation 'org.flywaydb:flyway-core'
+
+        // Map Struct
+        implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+        annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+        annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
     }
 }
 
@@ -303,5 +312,13 @@ project(memberProfileInternalApiAdapterModule) {
     dependencies {
         implementation commonProject
         implementation project(memberProfileApplicationModule)
+        implementation project(memberProfileClientApiModule)
+        implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+        // Map Struct
+        implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+        annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+        annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+
     }
 }
