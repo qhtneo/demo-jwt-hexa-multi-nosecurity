@@ -17,10 +17,10 @@ CREATE TABLE IF NOT EXISTS member_profile (
     CONSTRAINT uq_member_profile_nickname UNIQUE (nickname)
 );
 
-COMMENT ON COLUMN account.username  IS '계정(비정규화)';
-COMMENT ON COLUMN account.account_id  IS 'account 테이블의 아이디';
-COMMENT ON COLUMN account.nickname  IS '닉네임';
-COMMENT ON COLUMN account.gender  IS '성별';
-COMMENT ON COLUMN account.full_name  IS '본명';
-COMMENT ON COLUMN account.email  IS '이메일. 모든 메일 호환 길이는 아니며(320), 효율을 위해 일반적인 권장 커버리지(254)만 채택함.';
-COMMENT ON COLUMN account.status    IS '계정 상태(비정규화)';
+COMMENT ON COLUMN member_profile.username  IS '계정(비정규화)';
+COMMENT ON COLUMN member_profile.account_id  IS 'account 테이블의 아이디';
+COMMENT ON COLUMN member_profile.nickname  IS '닉네임';
+COMMENT ON COLUMN member_profile.gender  IS '성별';
+COMMENT ON COLUMN member_profile.full_name  IS '본명';
+COMMENT ON COLUMN member_profile.email  IS '이메일. 모든 메일 호환 길이는 아니며(320), 효율을 위해 일반적인 권장 커버리지(254)만 채택함.';
+COMMENT ON COLUMN member_profile.status    IS '계정 상태(비정규화)';
