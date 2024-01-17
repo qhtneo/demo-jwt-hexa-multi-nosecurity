@@ -277,6 +277,13 @@ project(memberProfileClientApiModule) {
     }
 }
 
+project(memberProfileOpenFeignClientBaseModule) {
+    dependencies {
+        implementation commonProject
+        api project(memberProfileClientApiModule)
+    }
+}
+
 project(memberProfileRdbAdapterModule) {
     dependencies {
         implementation commonProject
