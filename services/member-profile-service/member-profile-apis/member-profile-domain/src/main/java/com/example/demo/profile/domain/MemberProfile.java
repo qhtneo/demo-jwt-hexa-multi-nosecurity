@@ -1,6 +1,7 @@
 package com.example.demo.profile.domain;
 
 import com.example.demo.profile.domain.types.AccountStatus;
+import com.example.demo.profile.domain.types.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -17,7 +18,7 @@ public class MemberProfile {
     public String accountId;
     public String username;
     public String nickname;
-    public String gender;
+    public Gender gender;
     public String fullName;
     public String email;
 
