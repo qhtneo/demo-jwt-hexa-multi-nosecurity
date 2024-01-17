@@ -137,6 +137,9 @@ project(authenticationApplicationModule) {
         api project(authenticationDomainModule)
         api project(authenticationExceptionModule)
         api project(authenticationReadModelsModule)
+
+        // password encoder
+        implementation 'org.springframework.security:spring-security-crypto'
     }
 }
 
